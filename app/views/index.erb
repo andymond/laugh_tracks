@@ -9,7 +9,9 @@
     <div>
       <p> Name: <%= comedian.name %></p>
       <p> Age: <%= comedian.age %></p>
-      <p> Specials: <%= @specials.each {|special| special} %></p>
+      <p> Specials: <%= @specials.select do |special|
+                        special.name if special.comedian_id == comedian.id
+                        end %></p>
     </div>
     <% end %>
   </body>
