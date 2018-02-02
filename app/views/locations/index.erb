@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Locations Index</title>
+  </head>
+  <body>
+    <% @locations.each do |location| %>
+      <a href="/locations/<%= location.id %>"><%= location.name %></a>
+    <% end %>
+  </body>
+</html>

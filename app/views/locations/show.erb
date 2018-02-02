@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= @location.name %></title>
+  </head>
+  <body>
+    <% @specials.each do |special| %>
+      <p><%= special.name %></p>
+    <% end %>
+  </body>
+</html>
