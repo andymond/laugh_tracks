@@ -6,7 +6,7 @@
   </head>
   <body>
     <% @locations.each do |location| %>
-      <a href="/locations/<%= location.id %>"><%= location.name %></a>
+      <a href="/locations/<%= location.id %>"><%= location.city %>, <%= location.state %></a>
     <% end %>
   </body>
 </html>

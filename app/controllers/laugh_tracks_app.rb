@@ -15,6 +15,7 @@ class LaughTracksApp < Sinatra::Base
   get "/locations/:id" do
     @location = Location.find(params[:id])
     @specials = Special.where(location_id: params[:id])
+
     erb :"locations/show"
   end
 end
