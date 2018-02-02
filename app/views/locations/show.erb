@@ -5,8 +5,12 @@
     <title><%= @location.name %></title>
   </head>
   <body>
-    <% @specials.each do |special| %>
-      <p><%= special.name %></p>
+    <% if @specials.count >= 2 %>
+      <% @specials.each do |special| %>
+        <p><%= special.name %></p>
+      <% end %>
+    <% else %>
+      <p>Not enough specials!</p>
     <% end %>
   </body>
 </html>
